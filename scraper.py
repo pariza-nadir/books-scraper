@@ -30,3 +30,8 @@ for page in range(1, 6):
     print(f"Page {page} done")
 
 print("Scraping finished")
+
+df = pd.DataFrame(books, columns=["Title", "Price", "Rating"])
+df.to_csv("data.csv", index=False)
+
+print("Data saved to data.csv")
